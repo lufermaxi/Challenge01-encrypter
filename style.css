@@ -1,0 +1,59 @@
+header{
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    margin: 1%;
+    margin-bottom: 2%;
+    padding:1%;
+    background-color: #0ff5f5;
+}
+
+h1{
+    margin: 1%;
+}
+
+#text-boxes{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    padding: 2%;
+    
+}
+
+#original-text, #encrypted-text{
+    display:grid;
+    justify-content: center;
+    width: 40%;    
+}
+
+textarea{
+    resize: none;
+}
+
+button{
+    margin-top: 5%;
+    color: aliceblue;
+    border: 0;
+    padding: 2%;
+}
+
+#encrypt{
+    background-color: #1b8314;
+
+}
+
+#decrypt{
+    background-color: #d16a21;
+
+}
+
+#meme{
+    
+    width: 20%;
+    height: 20%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
