@@ -3,6 +3,7 @@
 <head>
      <meta charset = "UTF-8">
      <title> Challenge 01 ALURA </title>
+     <link rel="stylesheet" href="./reset.css">
      <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -13,25 +14,35 @@
           <img src="./src/logo_oracleAlura-es.1657102612.svg" alt="logo Alura">          
          
      </header>
-     <div id="text-boxes">
-          
-          <div id="original-text">
-               <textarea rows="10" cols="25"></textarea>     
-               <button id="encrypt">Encrypt!</button>
-               <button id="decrypt">Decrypt!</button>
+     <main>
+          <div class="text-boxes">
+               
+               <div id="input-area">
+                    <textarea rows="10" cols="25" id="in-text" placeholder="Text here..."></textarea>     
+                    
+               </div>
+               <div id="central-items">
+               
+                    <div id="buttons">     
+                         <button id="encrypt">Encrypt!</button>
+                         <button id="decrypt">Decrypt!</button>
+                         <button id="copy">Copy final text</button>
+                    </div>
 
-          </div>
-          
-          <div id="encrypted-text">
-               <textarea rows="10" cols="25"></textarea>     
-          </div>
+                    <img src="./src/Encryption.jpg" alt="encryption-meme" id="meme">
 
-          <img src="./src/Encryption.jpg" alt="encryption-meme" id="meme">
-          
-     </div>
+               </div>
+               
+               <div id="output-area">
+                    <textarea rows="10" cols="25" id="out-text"></textarea>     
+               </div>
+
+               
+          </div>
+     </main>   
      <footer>
           <p>Developed by Fernando Delgado Sánchez</p>
      </footer>
-
+     <script src="./app.js"></script>
 </body>
 </html>

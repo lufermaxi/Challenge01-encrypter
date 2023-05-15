@@ -1,9 +1,9 @@
 header{
     display: flex;
+    font-size:200%;
     align-items:center;
     justify-content:space-around;
-    margin: 1%;
-    margin-bottom: 2%;
+    
     padding:1%;
     background-color: #0ff5f5;
 }
@@ -12,48 +12,77 @@ h1{
     margin: 1%;
 }
 
-#text-boxes{
+.text-boxes{
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: aliceblue;
-    padding: 2%;
-    
+    padding: 1%;
+        
 }
 
-#original-text, #encrypted-text{
+#input-area, #output-area, #meme{
     display:grid;
-    justify-content: center;
-    width: 40%;    
+    justify-content:center;
+    width: 30%;    
+    height: 60%;
 }
 
-textarea{
+#central-items{
+    display:contents;
+    justify-content:space-evenly;
+    margin: 5px;
+}
+
+#buttons{
+    display: grid;
+    justify-content: center;
+    align-items:center;
+}
+
+#in-text{
     resize: none;
+    border-radius: 10%;
+    padding: 10px;   
+}
+
+#out-text{
+    resize: none;
+    background-color: antiquewhite;
+    pointer-events: none;
+    border-radius: 10%;
+    padding: 10px;   
 }
 
 button{
-    margin-top: 5%;
+    
     color: aliceblue;
-    border: 0;
-    padding: 2%;
+    margin: 10px;
+    border-radius: 10%;
 }
 
 #encrypt{
+    margin-top: 20px;
     background-color: #1b8314;
-
 }
 
 #decrypt{
     background-color: #d16a21;
+}
 
+#copy{
+    background-color: rgb(104, 104, 213);
 }
 
 #meme{
-    
-    width: 20%;
-    height: 20%;
+    scale: 60%;
+    border: dashed blueviolet; 
 }
 
 footer{
-    display: flex;
+    display:flex;
+    text-align: center;
+    padding-top: 2.5%;
     justify-content: center;
+    height: 10px;
 }
