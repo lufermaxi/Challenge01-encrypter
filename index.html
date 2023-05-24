@@ -3,8 +3,10 @@
 <head>
      <meta charset = "UTF-8">
      <title> Challenge 01 ALURA </title>
+     <link rel="icon" type="image/png" href="./src/dr_evil.png">
      <link rel="stylesheet" href="./reset.css">
      <link rel="stylesheet" href="./style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -15,34 +17,35 @@
          
      </header>
      <main>
-          <div class="text-boxes">
+          <section class="text-boxes">
                
                <div id="input-area">
-                    <textarea rows="10" cols="25" id="in-text" placeholder="Text here..."></textarea>     
-                    
-               </div>
-               <div id="central-items">
-               
+                    <textarea rows="10" cols="25" id="in-text" placeholder="Text here..."></textarea>                                               
                     <div id="buttons">     
                          <button id="encrypt">Encrypt!</button>
                          <button id="decrypt">Decrypt!</button>
-                         <button id="copy">Copy final text</button>
                     </div>
+               </div>
 
+               <div id="central-items">
                     <img src="./src/Encryption.jpg" alt="encryption-meme" id="meme">
-
                </div>
                
                <div id="output-area">
                     <textarea rows="10" cols="25" id="out-text"></textarea>     
-               </div>
+                    <button id="copy">Copy final text</button>
+                    
+               <p id="hide-message">The text has been copied to clipboard!<p>     
 
-               
-          </div>
+
+          </section>
      </main>   
+     
      <footer>
           <p>Developed by Fernando Delgado Sánchez</p>
      </footer>
+     
      <script src="./app.js"></script>
+
 </body>
 </html>

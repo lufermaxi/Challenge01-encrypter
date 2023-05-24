@@ -1,62 +1,84 @@
-/*La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat" */
+var inText = document.querySelector("#in-text");
+var outText = document.querySelector("#out-text");
+var btnEncrypt = document.querySelector("#encrypt");
+var btnDecrypt = document.querySelector("#decrypt");
+var btnCopy = document.querySelector("#copy");
+var message = document.querySelector("#hide-message");
 
-var phrase = [];
-var encryptedPhrase= [];
-var index = 0;
+///--------------------------------------------FUNCTIONS---------------------------------------///
+///*******************************************************************************************///
 
-function encryption(phrase) {
+function encryption(phrase) { 
+    
+    var phrase = phrase.value
+    var encryptedPhrase = [];
 
     for (let index = 0; index < phrase.length; index++) {
         
         if(phrase[index] == "a"){
-            encryptedPhrase.push("ai")
+                encryptedPhrase.push("ai");
+            }
+            
+            else if (phrase[index] == "e"){
+                encryptedPhrase.push("enter")
+            }
+            else if (phrase[index] == "i"){
+                encryptedPhrase.push("imes")
+            }
+            else if (phrase[index] == "o"){
+                encryptedPhrase.push("ober")
+            }
+            else if (phrase[index] == "u"){
+                encryptedPhrase.push("ufat")
+            }
+            else{
+                encryptedPhrase.push(phrase[index])
         }
-        
-        else if (phrase[index] == "e"){
-            encryptedPhrase.push("enter")
-        }
-        else if (phrase[index] == "i"){
-            encryptedPhrase.push("imes")
-        }
-        else if (phrase[index] == "o"){
-            encryptedPhrase.push("ober")
-        }
-        else if (phrase[index] == "u"){
-            encryptedPhrase.push("ufat")
-        }
-
-        else{
-            encryptedPhrase.push(phrase[index])
-        }
-        
     }
-    
-    console.log(encryptedPhrase.join(""));
+
+    var final = encryptedPhrase.join("");
+
+    return final
 }
-
-encryption("Osito del amor 🐻❤")
-
 
 function decryption(phrase) {
 
+    var phrase = phrase.value
+    var index = 0;
+
     while (index < phrase.length) {
         
-        phrase = phrase.replace ('ai', 'a');
-        phrase = phrase.replace ('enter', 'e');
-        phrase = phrase.replace ('imes', 'i');
-        phrase = phrase.replace ('ober', 'o');
-        phrase = phrase.replace ('ufat', 'u');
+        phrase = phrase.replace('ai', 'a');
+        phrase = phrase.replace('enter', 'e');
+        phrase = phrase.replace('imes', 'i');
+        phrase = phrase.replace('ober', 'o');
+        phrase = phrase.replace('ufat', 'u');
             
         index++
-        
     }
     
-    console.log(phrase);
-    
+    return phrase;
 }
 
-// decryption("fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!")
+
+///---------------------------------------------BUTTONS---------------------------------------///
+///*******************************************************************************************///
+
+btnEncrypt.onclick = function () {
+    message.style.opacity = "0";
+    document.querySelector("#out-text").innerHTML = encryption(inText);
+ }
+
+btnDecrypt.onclick = function () {
+    message.style.opacity = "0";
+    document.querySelector("#out-text").innerHTML = decryption(inText);
+}
+
+btnCopy.onclick = function () {
+
+    navigator.clipboard.writeText(outText.value);
+    message.style.opacity = "1";
+    message.style.transition = "700ms";
+ }
+
+ // fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!

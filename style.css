@@ -1,31 +1,35 @@
+body{
+    background-image: url("./src/Back.jpg");
+    display: block;
+    background-color:#0b7ce04b;
+    font-family: 'Roboto', sans-serif;
+}
+
 header{
     display: flex;
-    font-size:200%;
+    font-size:170%;
     align-items:center;
-    justify-content:space-around;
-    
+    justify-content:space-around;    
     padding:1%;
-    background-color: #0ff5f5;
+    background-color: #ffffff53;
 }
 
 h1{
     margin: 1%;
+    font-weight: bolder;
 }
 
 .text-boxes{
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: aliceblue;
-    padding: 1%;
-        
+    align-items: center;           
 }
 
 #input-area, #output-area, #meme{
     display:grid;
     justify-content:center;
     width: 30%;    
-    height: 60%;
+    height: 40%;
 }
 
 #central-items{
@@ -35,54 +39,83 @@ h1{
 }
 
 #buttons{
-    display: grid;
-    justify-content: center;
-    align-items:center;
+    display:grid;
+    align-items:normal;
 }
 
 #in-text{
     resize: none;
     border-radius: 10%;
     padding: 10px;   
+    margin-top: 20px;
 }
 
 #out-text{
     resize: none;
-    background-color: antiquewhite;
     pointer-events: none;
     border-radius: 10%;
     padding: 10px;   
 }
 
 button{
+    color: black;
+    margin: 5px;
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight:bold;
+    border-radius: 10px;
     
-    color: aliceblue;
-    margin: 10px;
-    border-radius: 10%;
+}
+
+button:hover{
+
+    color:white;
+    transition: 300ms;
+    transform: scale(0.97);
+    opacity: 0.9;
+
 }
 
 #encrypt{
     margin-top: 20px;
-    background-color: #1b8314;
+    background-color: #E8630A;
 }
 
 #decrypt{
-    background-color: #d16a21;
+    background-color: #FCD900;
 }
 
 #copy{
-    background-color: rgb(104, 104, 213);
+    margin-top: 20px;
+    background-color: #0a7940;
+}
+#hide-message{
+    background-color: #ffffffa4;
+    font-weight:400;
+    border: solid #E8630A;
+    border-radius: 5px;
+    font-size: 70%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    opacity: 0%;
 }
 
 #meme{
-    scale: 60%;
-    border: dashed blueviolet; 
+    scale: 80%;
+    border: solid blueviolet; 
+    box-shadow: 10px 10px 7px ;
 }
 
 footer{
-    display:flex;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    font-weight: bolder;
+    background: linear-gradient(#d9e8f4c8, #7aa5cb89);
+    border-top: solid 2px rgba(137, 43, 226, 0.248);
     text-align: center;
-    padding-top: 2.5%;
-    justify-content: center;
-    height: 10px;
+    padding-top: 8px;
+    padding-bottom:28px;
+    height: 2px;
 }
