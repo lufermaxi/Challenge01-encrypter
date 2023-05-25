@@ -1,6 +1,6 @@
 body{
-    background-image: url("./src/Back.jpg");
-    display: block;
+    background-image:url("./src/Back.jpg");
+    background-size: cover;
     background-color:#0b7ce04b;
     font-family: 'Roboto', sans-serif;
     
