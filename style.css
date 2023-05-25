@@ -132,7 +132,7 @@ footer{
     height: 1px;
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:760px) {
     .text-boxes{
         flex-direction: column;
         
