@@ -3,6 +3,7 @@ body{
     display: block;
     background-color:#0b7ce04b;
     font-family: 'Roboto', sans-serif;
+    
 }
 
 header{
@@ -19,27 +20,36 @@ h1{
     font-weight: bolder;
 }
 
+#alura-logo{
+    width: auto;
+}
+
 .text-boxes{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;           
 }
 
-#input-area, #output-area, #meme{
-    display:grid;
-    justify-content:center;
+#input-area, #output-area{
+    display:flex;
+    flex-direction: column;
     width: 30%;    
-    height: 40%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 #central-items{
-    display:contents;
-    justify-content:space-evenly;
-    margin: 5px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;   
+     
 }
 
 #buttons{
-    display:grid;
+    display:flex;
+    flex-direction: column;
     align-items:normal;
 }
 
@@ -91,7 +101,7 @@ button:hover{
 }
 #hide-message{
     background-color: #ffffffa4;
-    font-weight:400;
+    font-weight:600;
     border: solid #E8630A;
     border-radius: 5px;
     font-size: 70%;
@@ -102,20 +112,49 @@ button:hover{
 }
 
 #meme{
-    scale: 80%;
+    width: 90%;
     border: solid blueviolet; 
     box-shadow: 10px 10px 7px ;
+    margin: 10px;
+    margin-bottom: 20px;
 }
 
 footer{
-    position: fixed;
-    bottom:0;
+    position:fixed;
     width: 100%;
+    bottom:0px;
     font-weight: bolder;
-    background: linear-gradient(#d9e8f4c8, #7aa5cb89);
+    background: linear-gradient(#d9e8f4ef, #7aa5cb6a);
     border-top: solid 2px rgba(137, 43, 226, 0.248);
     text-align: center;
     padding-top: 8px;
-    padding-bottom:28px;
-    height: 2px;
+    padding-bottom:25px;
+    height: 1px;
+}
+
+@media screen and (max-width:420px) {
+    .text-boxes{
+        flex-direction: column;
+        
+}
+    #input-area, #output-area, #central-items{
+        width: 80%;       
+    }
+
+    header{
+        font-size: 90%;
+    }
+
+    #alura-logo{
+        width:40%
+    }
+
+    #meme{
+        width: 60%;    
+    }
+    
+    footer{
+        position:static;
+
+}
 }
