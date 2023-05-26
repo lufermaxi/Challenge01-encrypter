@@ -2,13 +2,15 @@ body{
     background-image:url("./src/Back.jpg");
     background-size: cover;
     background-color:#0b7ce04b;
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif;    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header{
     display: flex;
-    font-size:170%;
+    font-size:240%;
     align-items:center;
     justify-content:space-around;    
     padding:1%;
@@ -21,14 +23,14 @@ h1{
 }
 
 #alura-logo{
-    width: auto;
+    width: 35%;
 }
 
 .text-boxes{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;           
+    align-items: center;   
+    padding-top: 75px;    
 }
 
 #input-area, #output-area{
@@ -37,53 +39,57 @@ h1{
     width: 30%;    
     padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: 5%;
 }
 
 #central-items{
     display:flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;   
-     
+    width: 30%;  
+    padding-bottom: 80px;
+    padding-top: 40px;      
 }
 
 #buttons{
     display:flex;
     flex-direction: column;
-    align-items:normal;
+    align-items:normal;        
 }
 
 #in-text{
     resize: none;
     border-radius: 10%;
-    padding: 10px;   
+    padding: 30px;   
     margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 220%;
 }
 
 #out-text{
     resize: none;
     pointer-events: none;
     border-radius: 10%;
-    padding: 10px;   
+    padding: 30px;   
+    margin-bottom: 20px;
+    font-size: 220%;
 }
 
 button{
     color: black;
+    border-radius: 10px;
     margin: 5px;
     padding: 5px 0;
-    font-size: 15px;
+    font-size: 30px;
     font-weight:bold;
-    border-radius: 10px;
-    
+    cursor: pointer; 
 }
 
 button:hover{
-
     color:white;
     transition: 300ms;
     transform: scale(0.97);
     opacity: 0.9;
-
 }
 
 #encrypt{
@@ -96,15 +102,16 @@ button:hover{
 }
 
 #copy{
-    margin-top: 20px;
     background-color: #0a7940;
+    margin-top: 20px;
 }
+
 #hide-message{
     background-color: #ffffffa4;
-    font-weight:600;
     border: solid #E8630A;
-    border-radius: 5px;
-    font-size: 70%;
+    border-radius: 10px;
+    font-size: 150%;
+    font-weight:600;
     text-align: center;
     margin-top: 10px;
     padding: 5px;
@@ -112,41 +119,43 @@ button:hover{
 }
 
 #meme{
-    width: 90%;
+    width: 80%;
     border: solid blueviolet; 
-    box-shadow: 10px 10px 7px ;
-    margin: 10px;
-    margin-bottom: 20px;
+    box-shadow: 10px 10px 7px ;    
 }
 
 footer{
-    position:fixed;
-    width: 100%;
-    bottom:0px;
+    font-size: 180%;
+    margin-top: auto;
     font-weight: bolder;
     background: linear-gradient(#d9e8f4ef, #7aa5cb6a);
     border-top: solid 2px rgba(137, 43, 226, 0.248);
     text-align: center;
-    padding-top: 8px;
-    padding-bottom:25px;
+    padding-top: 18px;
+    padding-bottom:45px;
     height: 1px;
 }
+
+/*/////////////////////////////////////////////////////////*/
+/*///////////////////  MEDIA QUERYS  //////////////////////*/
+/*/////////////////////////////////////////////////////////*/
+
 
 @media screen and (max-width:760px) {
     .text-boxes{
         flex-direction: column;
-        
-}
+    }
+    
     #input-area, #output-area, #central-items{
         width: 80%;       
     }
 
     header{
-        font-size: 90%;
+        font-size: 150%;
     }
 
     #alura-logo{
-        width:40%
+        width:45%
     }
 
     #meme{
@@ -155,6 +164,5 @@ footer{
     
     footer{
         position:static;
-
-}
+    }
 }
